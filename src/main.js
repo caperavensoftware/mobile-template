@@ -3,7 +3,10 @@ export function configure(aurelia) {
         aurelia.use
             .standardConfiguration()
             .developmentLogging()
-            .globalResources("components/input/pp-input.html")
+            .globalResources(
+                "components/input/pp-input.html",
+                "custom-attributes/selectable"
+            )
             .plugin();
 
         aurelia.start().then(() => {

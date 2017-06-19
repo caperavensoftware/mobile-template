@@ -6,8 +6,14 @@
             </section>
 
             <section class="mdc-toolbar__section mdc-toolbar__section--align-end dm-right" role="toolbar">
-                <button click.delegate="login()" class="mdc-button mdc-button--raised mdc-button--accent mdc-ripple-upgraded mdc-ripple-upgraded--background-active-fill mdc-ripple-upgraded--foreground-activation">Validate</button>
+                <button click.delegate="defaultAction()" class="mdc-button mdc-button--raised mdc-button--accent mdc-ripple-upgraded mdc-ripple-upgraded--background-active-fill mdc-ripple-upgraded--foreground-activation">Action 1</button>
             </section>
         </div>
     </header>
+
+    <ul class="mdc-list fp-list" selectable="selected-id.two-way: selectedId">
+        <li class="mdc-list-item" repeat.for="item of items" data-id.bind="item.id">
+            <div>${item.title}</div>
+        </li>
+    </ul>
 </template>

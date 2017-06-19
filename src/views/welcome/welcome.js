@@ -1,10 +1,13 @@
+import {inject} from "aurelia-framework";
+import {Router} from 'aurelia-router';
 
-
+@inject(Router)
 export class Welcome {
     model;
 
-    constructor() {
+    constructor(router) {
         this.model = new LoginModel();
+        this.router = router;
     }
 
     login() {
@@ -12,7 +15,7 @@ export class Welcome {
             console.error("error");
         }
         else {
-            console.log("valid");
+            this.router.navigate("list");
         }
     }
 }

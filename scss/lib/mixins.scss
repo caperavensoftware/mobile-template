@@ -15,3 +15,14 @@
   align-items: center;
   justify-content: center;
 }
+
+@mixin ignore-device-rendering {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+@mixin overflow-scroll($overflow, $overflowWebkit) {
+  overflow-y: $overflow;
+  -webkit-overflow-scrolling: $overflowWebkit;
+}

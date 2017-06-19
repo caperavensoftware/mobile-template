@@ -4,7 +4,8 @@ export function configure(aurelia) {
             .standardConfiguration()
             .developmentLogging()
             .globalResources(
-                "components/input/pp-input.html",
+                "components/templates/pp-input.html",
+                "components/templates/pp-header.html",
                 "custom-attributes/selectable"
             )
             .plugin();

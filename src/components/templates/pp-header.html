@@ -1,0 +1,13 @@
+<template bindable="router">
+    <header class="mdc-toolbar">
+        <div class="mdc-toolbar__row">
+            <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
+                <span class="mdc-toolbar__title">${router.currentInstruction.config.title}</span>
+            </section>
+
+            <section class="mdc-toolbar__section mdc-toolbar__section--align-end dm-right" role="toolbar">
+                <slot></slot>
+            </section>
+        </div>
+    </header>
+</template>

@@ -1,15 +1,7 @@
 <template>
-    <header class="mdc-toolbar">
-        <div class="mdc-toolbar__row">
-            <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
-                <span class="mdc-toolbar__title">${router.currentInstruction.config.title}</span>
-            </section>
-
-            <section class="mdc-toolbar__section mdc-toolbar__section--align-end dm-right" role="toolbar">
-                <button click.delegate="defaultAction()" class="mdc-button mdc-button--raised mdc-button--accent mdc-ripple-upgraded mdc-ripple-upgraded--background-active-fill mdc-ripple-upgraded--foreground-activation">Action 1</button>
-            </section>
-        </div>
-    </header>
+    <pp-header router.bind="router">
+        <button click.delegate="defaultAction()" class="mdc-button mdc-button--raised mdc-button--accent mdc-ripple-upgraded mdc-ripple-upgraded--background-active-fill mdc-ripple-upgraded--foreground-activation">Action 1</button>
+    </pp-header>
 
     <ul class="mdc-list fp-list" selectable="selected-id.two-way: selectedId">
         <li class="mdc-list-item" repeat.for="item of items" data-id.bind="item.id">

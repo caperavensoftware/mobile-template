@@ -1,0 +1,14 @@
+@import './../lib/variables.scss';
+@import './../lib/mixins.scss';
+
+.login-body {
+  position: absolute;
+  left: 0;
+  top: $header-height + $half-padding;
+  right: 0;
+  bottom: 0;
+
+  @include flex();
+  @include flex-column();
+  @include flex-center();
+}

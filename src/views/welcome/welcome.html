@@ -1,0 +1,20 @@
+<template>
+    <require from="./../../../../styles/views/welcome.css"></require>
+
+    <header class="mdc-toolbar">
+        <div class="mdc-toolbar__row">
+            <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
+                <span class="mdc-toolbar__title">${router.currentInstruction.config.title}</span>
+            </section>
+
+            <section class="mdc-toolbar__section mdc-toolbar__section--align-end dm-right" role="toolbar">
+                <button click.delegate="login()" class="mdc-button mdc-button--raised mdc-button--accent mdc-ripple-upgraded mdc-ripple-upgraded--background-active-fill mdc-ripple-upgraded--foreground-activation">Validate</button>
+            </section>
+        </div>
+    </header>
+
+    <div class="login-body">
+        <pp-input label="Your name:" field.two-way="model.userName" type="text" placeholder="name"></pp-input>
+        <pp-input label="Your password:" field.two-way="model.password" type="password" placeholder="password"></pp-input>
+    </div>
+</template>

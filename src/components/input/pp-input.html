@@ -1,0 +1,8 @@
+<template bindable="type,label,field,placeholder">
+    <div class="mdc-form-field mdc-form-field--align-end">
+        <div class="mdc-textfield" data-demo-no-auto-js="">
+            <input type.bind="type" class="mdc-textfield__input" id="edtUserName" placeholder.bind="placeholder" required value.bind="field">
+        </div>
+        <label for="edtUserName">${label}</label>
+    </div>
+</template>

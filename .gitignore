@@ -1,0 +1,8 @@
+# Created by .ignore support plugin (hsz.mobi)
+/jspm_packages/
+/node_modules/
+/.nyc_output/
+/coverage/
+/app/
+/styles/
+/package-lock.json

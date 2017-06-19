@@ -1,0 +1,40 @@
+@import './lib/normalize';
+@import './lib/colors.scss';
+@import './lib/variables.scss';
+
+@font-face {
+  font-family: appfont;
+  src: url("./fonts/Roboto-Regular.ttf");
+}
+
+html {
+  font-family: 'Roboto', appfont, 'Helvetica', sans-serif;
+  font-size: 16px;
+  background: $primary-background;
+}
+
+html, body {
+  width: 100vw;
+  height: 100vh;
+}
+
+header {
+  height: $header-height;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+
+  h1 {
+    text-align: center;
+    padding: 0.5rem;
+    margin: 0;
+    font-size: 2rem;
+  }
+}
+
+label {
+  display: block;
+  width: 8rem;
+}
+
+.dm-right {
+  margin-right: $default-padding;
+}

@@ -6,7 +6,8 @@ export function configure(aurelia) {
             .globalResources(
                 "components/templates/pp-input.html",
                 "components/templates/pp-header.html",
-                "custom-attributes/selectable"
+                "custom-attributes/selectable",
+                "components/lookup/lookup"
             )
             .plugin();
 

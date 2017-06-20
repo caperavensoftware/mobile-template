@@ -1,8 +1,9 @@
 import {bindable, inject} from "aurelia-framework";
 import {Router} from 'aurelia-router';
+import {EventAggregator} from 'aurelia-event-aggregator';
 import {filter} from './../../lib/filter';
 
-@inject(Router)
+@inject(EventAggregator, Router)
 export class List {
     /**
      * backup of items as fallback after filter
@@ -28,7 +29,8 @@ export class List {
      * Constructor
      * @param router
      */
-    constructor(router) {
+    constructor(eventAggregator, router) {
+        this.eventAggregator = eventAggregator;
         this.router = router;
     }
 
@@ -72,7 +74,12 @@ export class List {
     }
 
     defaultAction() {
-        console.log(this.selectedId);
+        const event = this.eventAggregator.subscribe("lookup-result", result => {
+           console.log(result);
+           event.dispose();
+        });
+
+        this.eventAggregator.publish("lookup-request", this.items);
     }
 
     searchTextChanged(newValue) {
